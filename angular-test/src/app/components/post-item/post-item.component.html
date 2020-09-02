@@ -1,0 +1,16 @@
+<div class="card" style="width: 18rem">
+  <app-image [src]="post.photoUrl" [alt]="post.title"></app-image>
+
+  <div class="card-body">
+    <h5 class="card-title">{{ post.title }}</h5>
+    <p class="card-text">
+      {{ post.description }}
+    </p>
+    <div class="align-items-center d-flex justify-content-between">
+      <div class="tags">
+        <span class="tags__item" *ngFor="let tag of post.tags">{{ tag }}</span>
+      </div>
+      <a href="#" class="btn btn-primary">View</a>
+    </div>
+  </div>
+</div>

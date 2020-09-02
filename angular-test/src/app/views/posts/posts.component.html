@@ -1,1 +1,8 @@
-<p>posts Page</p>
+<!-- <p *ngIf="loading; else posts">Loading Posts...</p> -->
+<!-- <ng-template #posts> -->
+<div class="row">
+  <div class="col-sm" *ngFor="let post of posts">
+    <app-post-item [post]="post"></app-post-item>
+  </div>
+</div>
+<!-- </ng-template> -->
