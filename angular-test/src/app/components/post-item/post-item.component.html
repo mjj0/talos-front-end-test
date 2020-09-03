@@ -14,7 +14,7 @@
       <div class="tags">
         <span class="tags__item" *ngFor="let tag of post.tags">{{ tag }}</span>
       </div>
-      <a href="#" class="btn btn-primary">View</a>
+      <button class="btn btn-primary" (click)="goToDetailsPage()">View</button>
     </div>
   </div>
 </div>

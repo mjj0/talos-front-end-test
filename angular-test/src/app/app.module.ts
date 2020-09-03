@@ -14,6 +14,7 @@ import { PostItemComponent } from "./components/post-item/post-item.component";
 import { ImageComponent } from "./components/shared/image/image.component";
 import { PostDetailsFormComponent } from "./components/post-details-form/post-details-form.component";
 import { PostTagsFormComponent } from './components/post-tags-form/post-tags-form.component';
+import { PostDetailsComponent } from './views/post-details/post-details.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { PostTagsFormComponent } from './components/post-tags-form/post-tags-for
     ImageComponent,
     PostDetailsFormComponent,
     PostTagsFormComponent,
+    PostDetailsComponent,
   ],
   imports: [
     BrowserModule,

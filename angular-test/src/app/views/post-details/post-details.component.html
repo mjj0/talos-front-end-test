@@ -1,0 +1,9 @@
+<div *ngIf="post">
+  <app-image *ngIf="post.photoUrl" [src]="post.photoUrl"></app-image>
+  <h2 class="my-4">{{ post.title }}</h2>
+  <p class="text-center">{{ post.description }}</p>
+  <div class="tags" class="mt-2">
+    <span class="mx-3" *ngFor="let tag of post.tags">{{ tag }}</span>
+  </div>
+</div>
+<h4 *ngIf="loading">Loading Post...</h4>

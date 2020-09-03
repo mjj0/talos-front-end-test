@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from "@angular/core";
 import { Post } from "src/app/models/post.model";
+import { Router } from "@angular/router";
 
 @Component({
   selector: "app-post-item",
@@ -8,7 +9,11 @@ import { Post } from "src/app/models/post.model";
 })
 export class PostItemComponent implements OnInit {
   @Input() post: Post;
-  constructor() {}
+  constructor(private router: Router) {}
 
   ngOnInit() {}
+
+  goToDetailsPage() {
+    this.router.navigate(["posts", this.post.id]);
+  }
 }
