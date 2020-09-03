@@ -25,7 +25,7 @@ export class PostDetailsFormComponent implements OnInit {
       const reader = new FileReader();
       this.file = input.files[0];
 
-      reader.onload = (loadEvent) => {
+      reader.onload = (loadEvent: any) => {
         this.previewImage = loadEvent.target.result;
       };
 
