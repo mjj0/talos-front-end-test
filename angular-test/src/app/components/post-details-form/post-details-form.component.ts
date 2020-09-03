@@ -10,17 +10,35 @@ export class PostDetailsFormComponent implements OnInit {
   title: string;
   description: string;
   tags: string[] = [];
+  previewImage: string | ArrayBuffer;
+  file: File;
   @Output() submit = new EventEmitter<Post>();
 
   constructor() {}
 
   ngOnInit() {}
 
+  onSelectImage(e) {
+    const input = e.target;
+    if (input.files && input.files.length) {
+      this.previewImage = "";
+      const reader = new FileReader();
+      this.file = input.files[0];
+
+      reader.onload = (loadEvent) => {
+        this.previewImage = loadEvent.target.result;
+      };
+
+      reader.readAsDataURL(this.file);
+    }
+  }
+
   onSubmit() {
     this.submit.emit({
       title: this.title,
       description: this.description,
       tags: this.tags,
+      photoUrl: this.file,
     });
   }
 }

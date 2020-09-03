@@ -5,16 +5,24 @@
         <img src="assets/img/logo.svg" class="d-block" alt="Talog Logo" />
       </li>
       <li class="nav-item">
-        <h1 class="mb-0">Talos technical test</h1>
+        <h1 class="mb-0 d-none d-md-block">Talos technical test</h1>
       </li>
       <li class="nav-item ml-auto">
-        <a class="nav-link" routerLink="/posts" href="#">Posts</a>
+        <a
+          class="nav-link"
+          routerLink="/posts"
+          routerLinkActive="d-none"
+          [routerLinkActiveOptions]="{ exact: true }"
+          href="#"
+          >Posts</a
+        >
       </li>
       <li class="nav-item">
         <div
           class="add-post btn btn-primary"
           routerLink="/posts/create"
           routerLinkActive="d-none"
+          [routerLinkActiveOptions]="{ exact: true }"
         >
           <div class="add-post__content">
             <span class="add-post__text">Create Post</span>

@@ -8,7 +8,6 @@ import { Post } from "src/app/models/post.model";
   styleUrls: ["./posts.component.scss"],
 })
 export class PostsComponent implements OnInit {
-  private loading = true;
   posts: Post[] = [];
   constructor(private postService: PostService) {}
 

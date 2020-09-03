@@ -13,9 +13,17 @@ export class CreatePostComponent implements OnInit {
 
   ngOnInit() {}
 
-  createPost(postData: Post) {
-    this.postService
-      .createPost(postData.title, postData.description, postData.tags)
-      .then(() => this.router.navigate(["posts"]));
+  async createPost(postData: Post) {
+    const { id } = await this.postService.createPost(
+      postData.title,
+      postData.description,
+      postData.tags
+    );
+
+    if (postData.photoUrl) {
+      await this.postService.uploadPostImage(id, postData.photoUrl);
+    }
+
+    this.router.navigate(["posts"]);
   }
 }
