@@ -1,4 +1,4 @@
-<header class="border-bottom py-2">
+<header class="border-bottom p-2">
   <nav>
     <ul class="nav">
       <li class="nav-item d-block">
@@ -11,7 +11,16 @@
         <a class="nav-link" routerLink="/posts" href="#">Posts</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" routerLink="/posts/create" href="#">Create Post</a>
+        <div
+          class="add-post btn btn-primary"
+          routerLink="/posts/create"
+          routerLinkActive="d-none"
+        >
+          <div class="add-post__content">
+            <span class="add-post__text">Create Post</span>
+            <i class="fas fa-plus add-post__icon"></i>
+          </div>
+        </div>
       </li>
     </ul>
   </nav>

@@ -1,0 +1,31 @@
+.add-post {
+  width: 20px;
+  transition: transform 0.3s;
+  transform-origin: 100% 50%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0;
+  position: relative;
+
+  &__text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+  }
+
+  &:hover {
+    transform: scaleX(5);
+    .add-post__text {
+      opacity: 1;
+      transform: translate(-50%, -50%) scaleX(0.2);
+    }
+
+    .add-post__icon {
+      opacity: 0;
+    }
+  }
+}
