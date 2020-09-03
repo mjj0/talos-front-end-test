@@ -1,0 +1,30 @@
+<div class="row">
+  <div class="col">
+    <div class="form-group">
+      <label for="title">Title</label>
+      <input
+        type="text"
+        class="form-control"
+        id="title"
+        name="title"
+        placeholder="Enter Post Title"
+        [(ngModel)]="title"
+      />
+    </div>
+    <div class="form-group">
+      <label for="description">Description</label>
+      <textarea
+        class="form-control"
+        id="description"
+        placeholder="Enter Post Description"
+        cols="5"
+        name="description"
+        [(ngModel)]="description"
+      ></textarea>
+    </div>
+    <app-post-tags-form (change)="tags = $event"></app-post-tags-form>
+  </div>
+  <div class="col"></div>
+</div>
+
+<button class="btn btn-primary" (click)="onSubmit()">Create Post</button>

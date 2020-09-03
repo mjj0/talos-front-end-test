@@ -1,5 +1,9 @@
 <div class="card" style="width: 18rem">
-  <app-image [src]="post.photoUrl" [alt]="post.title"></app-image>
+  <app-image
+    *ngIf="post.photoUrl"
+    [src]="post.photoUrl"
+    [alt]="post.title"
+  ></app-image>
 
   <div class="card-body">
     <h5 class="card-title">{{ post.title }}</h5>

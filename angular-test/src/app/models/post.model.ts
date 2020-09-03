@@ -1,7 +1,7 @@
 export interface Post {
-  id: string;
+  id?: string;
   title: string;
   description: string;
-  photoUrl: string;
+  photoUrl?: string;
   tags: string[];
 }

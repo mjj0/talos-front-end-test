@@ -13,4 +13,18 @@ export class PostService {
   fetchPosts(): Promise<Post[]> {
     return this.apiService.get(POSTS_ENDPOINT);
   }
+
+  createPost(
+    title: string,
+    description: string,
+    tags: string[],
+    photo?: string
+  ) {
+    return this.apiService.post(POSTS_ENDPOINT, {
+      title,
+      description,
+      tags,
+      photo,
+    });
+  }
 }

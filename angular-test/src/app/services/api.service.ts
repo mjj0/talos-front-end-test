@@ -22,4 +22,10 @@ export class ApiService {
       .get(`${this.apiUrl}/${route}`, this.httpOptions)
       .toPromise();
   }
+
+  post(route: string, payload: any): any {
+    return this.http
+      .post(`${this.apiUrl}/${route}`, payload, this.httpOptions)
+      .toPromise();
+  }
 }

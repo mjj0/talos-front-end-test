@@ -1,0 +1,16 @@
+<label for="tag">Tags</label>
+<div class="row no-gutters">
+  <div class="col">
+    <input type="text" class="form-control" id="tag" [(ngModel)]="tagName" />
+  </div>
+  <button class="btn btn-primary ml-1" (click)="addTag()">Add Tag</button>
+</div>
+
+<ul class="list-unstyled mt-3 d-flex flex-wrap">
+  <li *ngFor="let tag of tags">
+    <div class="p-2 border d-inline-block mx-1 mb-1">
+      {{ tag }}
+      <i class="fas fa-times cu-pointer" (click)="removeTag(tag)"></i>
+    </div>
+  </li>
+</ul>
